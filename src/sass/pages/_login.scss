@@ -1,0 +1,154 @@
+body {
+    background-color: var(--clr-bg-main);
+    font-family: var(--font-family);
+    position: relative;
+    svg {
+        max-height: 90%;
+    }
+    .svg-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill-opacity: 0.8;
+    }
+    .svg-right {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        fill-opacity: 0.8;
+    }
+    .svg-bottom-right {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        fill-opacity: 0.8;
+    }
+    .svg-bottom-left {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        fill-opacity: 0.8;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.login {
+    max-width: 950px;
+    padding: 3rem;
+    margin: 0 auto;
+
+    &-details {
+        overflow: hidden;
+        width: 100%;
+    }
+    &-header {
+        padding: 3rem 0 2rem 0;
+        h2 {
+            color: var(--clr-heading-900);
+        }
+        span {
+            color: var(--clr-heading-800);
+        }
+    }
+    &-body {
+        margin-inline: auto;
+        padding: 1.5rem 4rem;
+        position: relative;
+        > div {
+            flex-basis: 100%;
+        }
+        background-color: var(--clr-login-details);
+    }
+
+    &-rightSide {
+        h4 {
+            color: var(--clr-logo);
+            font-weight: bold;
+            line-height: 0.9;
+        }
+        h6 {
+            color: var(--clr-login-text);
+            padding-bottom: 0.5rem;
+        }
+        form {
+            input:not(:nth-last-child(3)) {
+                min-width: 100%;
+            }
+            button {
+                background-color: var(--clr-bg-main);
+                color: var(--clr-heading-900);
+                padding: 0.8rem 2.5rem;
+                font-size: 0.9rem;
+                font-weight: bold;
+                border-radius: 3px;
+                &:hover {
+                    color: var(--clr-bg-main);
+                }
+            }
+            #check-box {
+                width: 17px;
+                height: 17px;
+                &:checked {
+                    accent-color: var(--clr-bg-main);
+                    filter: drop-shadow(0px 0px 2px gray);
+                }
+            }
+        }
+    }
+    &-leftSide {
+        h3 {
+            font-weight: bold;
+            color: var(--clr-logo);
+        }
+    }
+    .W-char {
+        letter-spacing: -4px;
+    }
+    &-inputs {
+        input {
+            outline-color: var(--clr-bg-main);
+            border: 1px solid var(--clr-bg-main);
+            padding: 5px 40px;
+            border-radius: 2px;
+        }
+        // .pass-field input {
+        //     -webkit-text-security: disc;
+        //     text-security: square;
+        // }
+        .input-field,
+        .pass-field {
+            position: relative;
+            span {
+                position: absolute;
+                left: 20px;
+            }
+        }
+    }
+    .footer {
+        background-color: var(--clr-login-details);
+        span {
+            display: inline-block;
+            color: var(--clr-login);
+            font-size: 0.8125rem;
+        }
+    }
+    &-newUser a {
+        color: var(--clr-login);
+    }
+    @media (max-width: 620px) {
+        .login-body {
+            padding: 0.8125rem;
+        }
+        .login-rightSide {
+            padding: 0.8125rem;
+        }
+        form {
+            font-size: 0.8125rem;
+        }
+    }
+}

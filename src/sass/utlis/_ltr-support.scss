@@ -1,0 +1,26 @@
+/*  ltr variable support
+================================ */
+
+$def-float: left;
+$opp-float: right;
+$def-direction: ltr;
+$opp-direction: rtl;
+$body-text-align: $def-float;
+$def-scale: 1;
+$opp-scale: -1;
+$breadcrumb-rotate-angel: -90deg;
+
+/*  ltr font support
+================================ */
+
+// @include font-face($ltr-fonts, $ltr-fonts-folder, normal, normal, $ltr-fonts-ext);
+// $font-medium: "OpenSans-Medium";
+// $font-bold: "OpenSans-Bold";
+// $font-light: "OpenSans-Light";
+// $font-regular: "OpenSans-Regular";
+// $font-semBold: "OpenSans-SemiBold";
+// $asward-regular: "Oswald-Regular";
+// $asward-bold: "Oswald-Bold";
+// $asward-medium: "Oswald-Medium";
+// $asward-light: "Oswald-Light";
+// $font-family-base: $font-regular;
