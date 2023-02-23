@@ -52,7 +52,7 @@ const Login = () => {
                                         <div>
                                             <div className="d-flex justify-content-between">
                                                 <h4>
-                                                    <span className="W-char">VV</span>
+                                                    <span className="We-char">VV</span>
                                                     &nbsp;elcome Back!
                                                 </h4>
                                                 <span
@@ -242,5 +242,4 @@ const Login = () => {
         </>
     );
 };
-
 export default Login;

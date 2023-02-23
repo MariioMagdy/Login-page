@@ -50,6 +50,7 @@ a {
         padding: 3rem 0 2rem 0;
         h2 {
             color: var(--clr-heading-900);
+            font-weight: 300;
         }
         span {
             color: var(--clr-heading-800);
@@ -76,6 +77,9 @@ a {
         h6 {
             color: var(--clr-login-text);
             padding-bottom: 0.5rem;
+        }
+        .We-char {
+            letter-spacing: -8.8px;
         }
         form {
             input:not(:nth-last-child(3)) {
@@ -140,7 +144,7 @@ a {
     &-leftSide {
         h3 {
             padding: 0 0 3rem 0;
-            font-weight: bold;
+            font-weight: 600;
             color: var(--clr-logo);
         }
     }
