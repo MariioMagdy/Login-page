@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../../sass/pages/_login.scss";
 import login from "../../assets/images/Login-img.png";
+import Validation from "./Validation";
 
 const Login = () => {
     const [lang, setLang] = useState(true);
+    const [errors, setErrors] = useState({});
+    const [values, setValues] = useState({
+        email: "",
+        password: "",
+    });
     const changLang = () => {
         setLang(!lang);
     };
+    //handel inputs validation
+    // const username = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setErrors(Validation(values));
+        // console.log(username);
+        // const data = new FormData(e.target);
+        // console.log(Object.fromEntries(data.entries()));
+    };
+
+    const onChange = (e) => {
+        setValues({ ...values, [e.target.name]: e.target.value });
+    };
+
     return (
         <>
             {lang ? (
@@ -64,16 +85,23 @@ const Login = () => {
                                             </div>
                                             <h6>Login to continue</h6>
                                         </div>
-                                        <form>
+                                        <form onSubmit={handleSubmit}>
                                             <div className="login-inputs d-flex flex-column gap-3 mb-3 ">
                                                 <div className="input-field d-flex justify-content-center align-items-center">
                                                     <span className="icon-user"></span>
                                                     <input
-                                                        type="text"
                                                         autoFocus
                                                         placeholder="Write your Email"
+                                                        name="email"
+                                                        value={values.email}
+                                                        onChange={onChange}
                                                     />
                                                 </div>
+                                                <span className="errorMsg">
+                                                    {errors.email && (
+                                                        <p>{errors.email}</p>
+                                                    )}
+                                                </span>
                                                 <div className="pass-field d-flex justify-content-center align-items-center">
                                                     <span className="icon-lock"></span>
                                                     <input
@@ -81,8 +109,15 @@ const Login = () => {
                                                         placeholder="**************"
                                                         id="password"
                                                         name="password"
+                                                        value={values.password}
+                                                        onChange={onChange}
                                                     />
                                                 </div>
+                                                <span className="errorMsg">
+                                                    {errors.password && (
+                                                        <p>{errors.password}</p>
+                                                    )}
+                                                </span>
                                             </div>
                                             <div className="d-flex text-center justify-content-between pb-4">
                                                 <div className="d-flex align-items-center gap-1">
@@ -178,16 +213,25 @@ const Login = () => {
                                                 سجل الدخول للمتابعة
                                             </h6>
                                         </div>
-                                        <form>
+                                        <form onSubmit={handleSubmit}>
                                             <div className="login-inputs d-flex flex-column gap-3 mb-3 ">
                                                 <div className="input-field d-flex justify-content-center align-items-center">
                                                     <span className="icon-user"></span>
                                                     <input
-                                                        type="text"
-                                                        autoFocus
+                                                        type="email"
                                                         placeholder="اكتب البريد الإلكتروني الخاص بك"
+                                                        name="email"
+                                                        value={values.email}
+                                                        onChange={onChange}
                                                     />
                                                 </div>
+                                                <span className="errorMsg">
+                                                    {!lang && errors.email ? (
+                                                        <p>الحساب مطلوب</p>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </span>
                                                 <div className="pass-field d-flex justify-content-center align-items-center">
                                                     <span className="icon-lock"></span>
                                                     <input
@@ -195,8 +239,17 @@ const Login = () => {
                                                         placeholder="كلمه المرور"
                                                         id="password"
                                                         name="password"
+                                                        value={values.password}
+                                                        onChange={onChange}
                                                     />
                                                 </div>
+                                                <span className="errorMsg">
+                                                    {!lang && errors.password ? (
+                                                        <p>كلمة المرور غير صحيحة</p>
+                                                    ) : (
+                                                        ""
+                                                    )}
+                                                </span>
                                             </div>
                                             <div className="d-flex text-center justify-content-between pb-4">
                                                 <div className="d-flex align-items-center gap-1">

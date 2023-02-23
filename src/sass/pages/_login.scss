@@ -131,6 +131,11 @@ a {
                     transform: scale(1);
                 }
             }
+            .errorMsg {
+                color: red;
+                font-size: 1rem;
+                text-align: center;
+            }
         }
         .lang {
             background-color: var(--clr-bg-main);
@@ -188,5 +193,8 @@ a {
         form {
             font-size: 0.8125rem;
         }
+    }
+    input:required form .errorMsg {
+        display: block;
     }
 }
