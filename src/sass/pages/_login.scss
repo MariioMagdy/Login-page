@@ -2,6 +2,7 @@ body {
     background-color: var(--clr-bg-main);
     font-family: var(--font-family);
     position: relative;
+
     svg {
         max-height: 90%;
     }
@@ -66,10 +67,12 @@ a {
     }
 
     &-rightSide {
+        padding: 4rem 0 0 0;
         h4 {
             color: var(--clr-logo);
             font-weight: bold;
             line-height: 0.9;
+            position: relative;
         }
         h6 {
             color: var(--clr-login-text);
@@ -99,9 +102,18 @@ a {
                 }
             }
         }
+        .lang {
+            background-color: var(--clr-bg-main);
+            color: var(--clr-heading-900);
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
     }
     &-leftSide {
         h3 {
+            padding: 0 0 3rem 0;
             font-weight: bold;
             color: var(--clr-logo);
         }
