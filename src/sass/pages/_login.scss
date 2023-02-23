@@ -93,12 +93,39 @@ a {
                     color: var(--clr-bg-main);
                 }
             }
-            #check-box {
+            input[type="checkbox"] {
+                appearance: none;
+                background-color: var(--clr-bg-main);
+                border-radius: 1px;
                 width: 17px;
                 height: 17px;
+                display: grid;
+                place-content: center;
                 &:checked {
                     accent-color: var(--clr-bg-main);
                     filter: drop-shadow(0px 0px 2px gray);
+                }
+                &::before {
+                    content: "";
+                    background-color: CanvasText;
+                    width: 0.65em;
+                    height: 0.65em;
+                    color: #fff;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    transform-origin: bottom left;
+                    box-shadow: inset 1em 1em #fff;
+                    clip-path: polygon(
+                        14% 44%,
+                        0 65%,
+                        50% 100%,
+                        100% 16%,
+                        80% 0%,
+                        43% 62%
+                    );
+                }
+                &:checked::before {
+                    transform: scale(1);
                 }
             }
         }
