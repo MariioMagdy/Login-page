@@ -78,13 +78,13 @@ const Login = () => {
                                                     <span className="icon-lock"></span>
                                                     <input
                                                         type="password"
-                                                        placeholder="Password"
+                                                        placeholder="**************"
                                                         id="password"
                                                         name="password"
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="d-flex justify-content-between pb-4">
+                                            <div className="d-flex text-center justify-content-between pb-4">
                                                 <div className="d-flex align-items-center gap-1">
                                                     <div>
                                                         <input
@@ -198,7 +198,7 @@ const Login = () => {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="d-flex justify-content-between pb-4">
+                                            <div className="d-flex text-center justify-content-between pb-4">
                                                 <div className="d-flex align-items-center gap-1">
                                                     <div>
                                                         <input
@@ -233,6 +233,9 @@ const Login = () => {
                             <span>Copyright Reserved&copy;2021</span>
                             <span>Terms and Conditions | Privacy Policy</span>
                         </div>
+                    </div>
+                    <div className="circle">
+                        <div></div>
                     </div>
                 </section>
             )}

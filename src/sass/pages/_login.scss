@@ -2,7 +2,6 @@ body {
     background-color: var(--clr-bg-main);
     font-family: var(--font-family);
     position: relative;
-
     svg {
         max-height: 90%;
     }
@@ -155,10 +154,6 @@ a {
             padding: 5px 40px;
             border-radius: 2px;
         }
-        // .pass-field input {
-        //     -webkit-text-security: disc;
-        //     text-security: square;
-        // }
         .input-field,
         .pass-field {
             position: relative;
