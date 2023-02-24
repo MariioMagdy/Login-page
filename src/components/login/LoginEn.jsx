@@ -34,9 +34,7 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                     </svg>
                     <div className="login-header">
                         <h2>Login Page</h2>
-                        <span>
-                            Designed <span className="W-char">vv</span>&nbsp;ith Adobe XD
-                        </span>
+                        <span>Designed with Adobe XD</span>
                     </div>
                     <div className="login-body">
                         <div className="row justify-content-center">
@@ -50,10 +48,7 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                                 <div className="p-4">
                                     <div>
                                         <div className="d-flex justify-content-between">
-                                            <h4>
-                                                <span className="We-char">VV</span>
-                                                &nbsp;elcome Back!
-                                            </h4>
+                                            <h4>Welcome Back!</h4>
                                             <span
                                                 className="fw-bold lang"
                                                 onClick={changLang}
@@ -104,11 +99,16 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                                                         name="check-box"
                                                     />
                                                 </div>
-                                                <label htmlFor="check-box">
+                                                <label
+                                                    className="login-linkColor"
+                                                    htmlFor="check-box"
+                                                >
                                                     Remember Me
                                                 </label>
                                             </div>
-                                            <span>Forget Password?</span>
+                                            <span className="login-linkColor">
+                                                Forget Password?
+                                            </span>
                                         </div>
                                         <div className="text-center py-2">
                                             <button
@@ -124,9 +124,8 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                                     </form>
                                 </div>
                                 <div className="login-newUser text-center">
-                                    <a href="#">
-                                        Ne<span className="W-char">VV</span>
-                                        &nbsp;User?&nbsp;Sign Up
+                                    <a href="#" className="login-linkColor">
+                                        New User? Sign Up
                                     </a>
                                 </div>
                             </div>

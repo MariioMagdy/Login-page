@@ -33,7 +33,6 @@ function LoginAr({ login, changLang, lang, handleForm, errors }) {
                     >
                         <circle cx="100" cy="1" r="30" />
                     </svg>
-
                     <div className="login-header">
                         <h2>تسجيل الدخول</h2>
                         <span>
