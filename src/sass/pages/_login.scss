@@ -209,3 +209,19 @@ a {
         display: block;
     }
 }
+
+@media (max-width: 222px) {
+    .watch-responsive {
+        padding: 0 !important;
+        font-size: 10px;
+    }
+    button {
+        padding: 5px !important;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .container-fluid {
+        padding: 0 !important;
+    }
+}

@@ -45,9 +45,9 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                                 </picture>
                             </div>
                             <div className="login-rightSide d-flex flex-column justify-content-center text-start col-lg-6 col-sm-12">
-                                <div className="p-4">
+                                <div className="p-4 watch-responsive">
                                     <div>
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex justify-content-between watch-responsive">
                                             <h4>Welcome Back!</h4>
                                             <span
                                                 className="fw-bold lang"
@@ -90,7 +90,7 @@ function LoginEn({ login, changLang, lang, handleForm, errors }) {
                                                 )}
                                             </span>
                                         </div>
-                                        <div className="d-flex text-center justify-content-between pb-4">
+                                        <div className="d-flex text-center justify-content-between pb-4 watch-responsive">
                                             <div className="d-flex align-items-center gap-1">
                                                 <div>
                                                     <input
